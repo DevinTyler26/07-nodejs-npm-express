@@ -73,8 +73,11 @@ articleView.setTeasers = () => {
   });
 };
 
-// COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
+// COMMENTED: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
 // PUT YOUR RESPONSE HERE
+/* It is called on the index.html page.
+After it is called, it shows the tab content, then hides the export fields.
+*/
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -86,8 +89,10 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
 // PUT YOUR RESPONSE HERE
+/* This function is called when the user creates their article. This is updated whenever the end user switches to a new field.
+*/
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -111,8 +116,9 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
 // PUT YOUR RESPONSE HERE
+// This function is called when the end user presses the submit button. 
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -124,8 +130,9 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+  // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
   // PUT YOUR RESPONSE HERE
+  // This function is called in article.js. It is called when a new blog posted is created and submitted in new.html. The submit button triggers this.
   article.insertRecord();
 }
 
