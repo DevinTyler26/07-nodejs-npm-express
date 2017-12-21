@@ -76,7 +76,7 @@ articleView.setTeasers = () => {
 // COMMENTED: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
 // PUT YOUR RESPONSE HERE
 /* It is called on the index.html page.
-After it is called, it shows the tab content, then hides the export fields.
+After it is called, it shows the tab content, then hides the export fields. It also sets up a few event listeners.
 */
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
@@ -118,7 +118,7 @@ articleView.create = () => {
 
 // COMMENTED: When is this function called? What event ultimately triggers its execution?
 // PUT YOUR RESPONSE HERE
-// This function is called when the end user presses the submit button. 
+// This function is called when the end user submits their article (pressing submit or enter on the form). 
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -132,7 +132,7 @@ articleView.submit = event => {
 
   // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
   // PUT YOUR RESPONSE HERE
-  // This function is called in article.js. It is called when a new blog posted is created and submitted in new.html. The submit button triggers this.
+  // This function is defined in article.js. It is called when a new blog posted is created and submitted in new.html. Submitting the form triggers this.
   article.insertRecord();
 }
 
