@@ -1,5 +1,5 @@
 {
-  "name": "devin-",
+  "name": "devin-michael",
   "version": "1.0.0",
   "description": "Lab07",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Devin and",
+  "author": "Devin and Michael",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
